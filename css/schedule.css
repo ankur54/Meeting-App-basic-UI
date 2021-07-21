@@ -1,0 +1,70 @@
+.daily-schedule {
+    flex-grow: 1;
+}
+
+.daily-schedule > h2, h3 {
+    padding: 0 3rem;
+    margin: 0.75em 0;
+    color: #6b6b6b;
+}
+
+.schedule-display {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+ 
+    position: relative;
+    padding: 2em 2em 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.schedule-time {
+    flex-basis: 5em;
+    flex-shrink: 0;
+}
+
+.time-start::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    background: rgb(209, 209, 209, 0.3);
+    height: 2px;
+    width: 85%;
+    left: 1em;
+}
+
+.meeting-range {
+    position: absolute;
+    top: calc(2em + 13px + 5em);
+    left: 6em;
+    height: 10em;
+    width: 65%;
+    border-radius: 0.5em;
+    cursor: pointer;
+    background-color: rgb(196, 159, 159, 0.3);
+}
+
+.curr-time {
+    position: absolute;
+    width: 85%;
+    height: 1em;
+    top: calc(2em + 4em);
+    left: 1em;
+    color: red;
+    z-index: 2;
+}
+
+.curr-time::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    background: red;
+    height: 2px;
+    width: 85%;
+    left: 0.75em;
+}
+
+.chosen-select {
+    height: 1.2em
+}

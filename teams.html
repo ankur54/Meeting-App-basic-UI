@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/teams.css">
+</head>
+<body>
+    <header>
+        <div class="add-teams">+</div>
+        <nav>
+            <a href="meetings.html" class="meeting-tab">Meeting</a>
+            <a href="teams.html" class="teams-tab active">Teams</a>
+        </nav>
+    </header>
+    <div class="modal-container">
+        <div class="modal">
+            <form action="" method="post" class="create-team">
+                <input type="text" name="team-title" id="create-team-title" required placeholder="Enter team title">
+                <textarea name="team-description" id="create-team-description" cols="30" rows="1" placeholder="What the team is about?"></textarea>
+                <button class="add-team-member">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-user"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="teams-list">
+        <div class="team-card">
+            <h2 class="team-card__title">
+                The Cyclists
+            </h2>
+            <p class="team-card__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, provident.
+            </p>
+            <div class="team-card__btn">
+                <button class="add-team-member">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-user"></i>
+                </button>
+                <button class="remove-team-member">
+                    <!-- - -->
+                    <!-- <i class="fa fa-user"></i> -->
+                    Excuse Yourself
+                </button>
+            </div>
+            <div class="team-members">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const modalContainer = document.querySelector('.modal-container');
+    const modal = modalContainer.querySelector('.modal')
+    modal.addEventListener('click', e => e.stopPropagation());
+    modalContainer.addEventListener('click', e => {
+        modalContainer.classList.remove('show')
+        addTeam.classList.remove('active')
+    })
+</script>
+<script src="js/header.js"></script>
+<script src="js/teams.js"></script>
+</html>

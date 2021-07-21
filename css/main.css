@@ -1,0 +1,68 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 2em;
+    background-color: #dfdfdf
+}
+
+header > 
+    .add-meeting,
+    .add-teams {
+    color: #777;
+    padding: 0.25em 0.5em;
+    border: 1px solid #777;
+    border-radius: 50%;
+    transition: transform 250ms ease-in-out;
+}
+
+header > 
+    .add-meeting.active,
+    .add-teams.active {
+    background-color: #777;
+    color: #c4c4c4;
+    transform: rotateZ(45deg);
+}
+
+header > 
+    .add-meeting:hover,
+    .add-teams:hover {
+    background-color: #c4c4c4;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a.active {
+    background-color: #b6b6b6;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+nav > a {
+    padding: 0.2em 0.5em;
+    border-radius: 0.2em;
+    border: 1.75px solid #b6b6b6;
+}

@@ -1,0 +1,98 @@
+.calendar-operation {
+    flex-basis: 35%;
+    min-height: 100vh;
+    padding: 3em 0;
+    
+    background-color: rgb(177, 177, 177);
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 0 1em;
+    z-index: 2;
+    background-color: rgb(177, 177, 177);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0 3em;
+}
+
+.year-selector {
+    display: flex;
+    gap: 1em;
+}
+
+.calendar-body {
+    padding: 2vw;
+    max-width: 27em;
+    height: 35%;
+    margin: 0 auto;
+}
+
+.calendar-week-day {
+    display: flex;
+    justify-content: space-around;
+}
+
+.week-day {
+    flex-basis: calc(100% / 7);
+    text-align: center;
+    margin: 1em 0;
+}
+
+.calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+    height: 100%;
+}
+
+.days-number {
+    flex-basis: calc(100% / 7);
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+.month-list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5em;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+
+    transform: scale(1.5);
+    visibility: hidden;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.month-list.show {
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: visible;
+    background-color: rgb(177, 177, 177);
+}
+
+.month-block {
+    flex-grow: 1;
+    flex-basis: calc(100% / 3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

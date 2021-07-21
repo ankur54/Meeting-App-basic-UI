@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="stylesheet" href="css/meeting-form.css">
+    <link rel="stylesheet" href="css/expandable-search.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="add-meeting">+</div>
+        <nav>
+            <a href="meetings.html" class="meeting-tab active">Meeting</a>
+            <a href="teams.html" class="teams-tab">Teams</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" class="search-bar__input" placeholder="Enter meeting description" name="search-input" id="">
+            <button class="search-bar__submit"><i class="fa fa-search"></i></button>
+        </div>
+    </header>
+    <main class="scheduler">
+        <section class="daily-schedule">
+            <h2 class="today-date"></h2>
+            <h3 class="today-day"></h3>
+            <div class="schedule-display">
+                <div class="curr-time"></div>
+                <!-- <div class="meeting-range"></div> -->
+                <!-- <div class="schedule-time">
+                    <div class="time-start">12am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">1am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">2am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">3am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">4am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">5am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">6am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">7am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">8am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">9am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">10am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">11am</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">12pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">1pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">2pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">3pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">4pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">5pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">6pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">7pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">8pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">9pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">10pm</div>
+                </div>
+                <div class="schedule-time">
+                    <div class="time-start">11pm</div>
+                </div> -->
+            </div>
+        </section>
+        <section class="calendar-operation">
+            <div class="calendar">
+                <div class="month-list"></div>
+                <div class="calendar-header">
+                    <div class="year-selector">
+                        <pre class="prev-year"><</pre>
+                        <span class="year">2021</span>
+                        <pre class="next-year">></pre>
+                    </div>
+                    <div class="month-selector">July</div>
+                </div>
+                <div class="calendar-body">
+                    <div class="calendar-week-day">
+                        <div class="week-day">Mon</div>
+                        <div class="week-day">Tue</div>
+                        <div class="week-day">Wed</div>
+                        <div class="week-day">Thr</div>
+                        <div class="week-day">Fri</div>
+                        <div class="week-day">Sat</div>
+                        <div class="week-day">Sun</div>
+                    </div>
+                    <div class="calendar-days">
+                        <!-- <div class="days-number">1</div>
+                        <div class="days-number">2</div>
+                        <div class="days-number">3</div>
+                        <div class="days-number">4</div>
+                        <div class="days-number">5</div>
+                        <div class="days-number">6</div>
+                        <div class="days-number">7</div>
+
+                        <div class="days-number">8</div>
+                        <div class="days-number">9</div>
+                        <div class="days-number">10</div>
+                        <div class="days-number">11</div>
+                        <div class="days-number">12</div>
+                        <div class="days-number">13</div>
+                        <div class="days-number">14</div>
+
+                        <div class="days-number">15</div>
+                        <div class="days-number">16</div>
+                        <div class="days-number">17</div>
+                        <div class="days-number">18</div>
+                        <div class="days-number">19</div>
+                        <div class="days-number">20</div>
+                        <div class="days-number">21</div>
+
+                        <div class="days-number">22</div>
+                        <div class="days-number">23</div>
+                        <div class="days-number">24</div>
+                        <div class="days-number">25</div>
+                        <div class="days-number">26</div>
+                        <div class="days-number">27</div>
+                        <div class="days-number">28</div>
+
+                        <div class="days-number">29</div>
+                        <div class="days-number">30</div> -->
+                    </div>
+                </div>
+            </div>
+            <form action="" method="post" class="create-meeting">
+                <input type="text" name="meeting-title" id="create-meeting-title" required placeholder="Enter meeting title">
+                <label for="create-meeting-date">Select meeting date</label>
+                <input type="date" name="meeting-date" id="create-meeting-date">
+                <label for="create-meeting-start-time">Start Time</label>
+                <input type="time" name="meeting-start-time" id="create-meeting-start-time">
+                <label for="create-meeting-end-time">End Time</label>
+                <input type="time" name="meeting-end-time" id="create-meeting-end-time">
+                <input type="text" name="meeting-description" id="create-meeting-description" placeholder="What the meeting is about?">
+                <button class="add-team-member">
+                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-user"></i>
+                </button>
+            </form>
+            <div class="event-details">
+                <h3 class="event-title">
+                    UNext - Welcome to Tech Bootcamp Training Program
+                </h3>
+                <div class="event-scrollable-section">
+                    <p class="event-description">
+                        Greetings!
+                        <br>
+                        <br>
+                        Blocking your calendar for the Tech Bootcamp (Training Program).
+                        <br>
+                        <br>
+                        The training program will be conducted using Microsoft Teams academic version platform. We have sent the welcome emailer with MS teams login credentials with the detailed login steps.
+                        Please ensure to join the training session via the MS teams credentials sent to your email id.
+                        <br>
+                        <br>
+                        Tomorrow we will have the orientation session from 9.0 AM to 9:30 AM, we will take you through the program overview and the program logistics.
+                    </p>
+                    <div class="event-attendees">
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                        test1@mail.com <br>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/calendar.js"></script>
+<script src="js/schedule.js"></script>
+<script src="js/header.js"></script>
+</html>
