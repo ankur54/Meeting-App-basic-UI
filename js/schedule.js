@@ -113,7 +113,6 @@ const milliTo12Hr = function () {
     const currTimeDiv = scheduleDisplay.querySelector('.curr-time')
     currTimeDiv.innerText = currTime
     currTimeDiv.style.top = `calc(2em + ${(hr + min/60) * 5}em)`
-    currTimeDiv.style.background = 'transparent'
 
     console.log(currTime)
 

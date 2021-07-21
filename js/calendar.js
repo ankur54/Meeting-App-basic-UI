@@ -32,6 +32,7 @@ const generateCalendar = (month, year) => {
         let day = document.createElement('div')
         day.classList.add('days-number')
         if (i >= first_day.getDay()) {
+            day.classList.add('show')
             day.innerHTML = i - first_day.getDay() + 1
             if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
                 day.classList.add('curr-date')
@@ -70,5 +71,11 @@ year_picker.querySelector(".prev-year")
 
 year_picker.querySelector(".next-year")
             .addEventListener('click', e => generateCalendar(currMonth, ++currYear))
+
+const startTime = '00:00'
+const endTime = '23:59'
+
+document.getElementById('filter-start-time').defaultValue = startTime
+document.getElementById('filter-end-time').defaultValue = endTime
 
 generateCalendar(currMonth, currYear)

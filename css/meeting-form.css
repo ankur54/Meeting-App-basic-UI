@@ -12,7 +12,7 @@ form.create-meeting {
     position: absolute;
     transform: translateY(-20em);
     transition: transform 250ms ease-in-out;
-    padding: 1em 2em;
+    padding: 3em 2em;
 }
 
 form.create-meeting.show {
