@@ -10,6 +10,9 @@
 
 .event-title {
     color: black;
+    font-size: 1.5em;
+    line-height: 1.45em;
+    font-family: 'Playfair Display', serif;
 }
 
 .event-scrollable-section {
@@ -45,4 +48,13 @@ p::before, p::after {
 
 .event-scrollable-section > p::after {
     bottom: -1em;
+}
+
+.event-scrollable-section > .event-description {
+    font-family: 'Roboto', sans-serif;
+}
+
+.event-scrollable-section > .event-attendees {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }

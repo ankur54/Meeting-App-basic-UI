@@ -24,7 +24,7 @@
     padding: 1em;
 
     z-index: 2;
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(190, 190, 190);
     border-radius: 10px;
     border: 1px solid rgb(255, 255, 255, 0.5);
     border-bottom: 2px solid rgb(255, 255, 255, 0.2);
@@ -42,10 +42,11 @@
 
 #filter-start-time,
 #filter-end-time {
-    padding: 5px 6px;
+    padding: 5px 0.5em;
     border: 1px solid rgb(255, 255, 255, 0.35);
     border-radius: 3px;
     color: rgb(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
 }
 
 .calendar-header > input {
@@ -80,6 +81,7 @@
     background: rgba(0, 0, 0, 0.35);
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    font-family: 'Abril Fatface', cursive;
 }
 
 .year-selector > .year {
@@ -92,6 +94,7 @@
     padding: 0.3em 1.25em;
     border-radius: 5px;
     font-size: 1.5em;
+    font-family: 'Abril Fatface', cursive;
     color: rgba(255, 255, 255, 0.5);
     background-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -123,6 +126,7 @@
     margin: 0.5em 0;
 
     font-size: 1.17em;
+    font-family: 'Abril Fatface', cursive;
     color: rgb(179, 143, 101);
     border-radius: 3px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -142,7 +146,8 @@
     padding: 0.75vw 0.5vw;
     text-align: center;
     font-size: 1.1em;
-    font-weight: 300;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
     color:rgb(104, 104, 104);
 }
 
@@ -175,6 +180,7 @@
     flex-wrap: wrap;
     align-content: stretch;
 
+    font-family: 'Roboto', sans-serif;
     transform: scale(1.5);
     visibility: hidden;
     pointer-events: none;

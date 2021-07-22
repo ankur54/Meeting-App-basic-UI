@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/teams.css">
 </head>
@@ -24,9 +25,22 @@
             <form action="" method="post" class="create-team">
                 <input type="text" name="team-title" id="create-team-title" required placeholder="Enter team title">
                 <textarea name="team-description" id="create-team-description" cols="30" rows="1" placeholder="What the team is about?"></textarea>
-                <button class="add-team-member">
-                    <i class="fa fa-plus"></i>
-                    <i class="fa fa-user"></i>
+                <select name="select-team-member" id="select-team-member">
+                    <option>Choose an Attendee</option>
+                    <option value="user.name@mail.domain">Attendee 1</option>
+                    <option value="user.name@mail.domain">Attendee 2</option>
+                    <option value="user.name@mail.domain">Attendee 3</option>
+                    <option value="user.name@mail.domain">Attendee 4</option>
+                    <option value="user.name@mail.domain">Attendee 5</option>
+                    <option value="user.name@mail.domain">Attendee 6</option>
+                    <option value="user.name@mail.domain">Attendee 7</option>
+                    <option value="user.name@mail.domain">Attendee 8</option>
+                    <option value="user.name@mail.domain">Attendee 9</option>
+                    <option value="user.name@mail.domain">Attendee 10</option>
+                </select>
+                <button class="create-team">
+                    <i class="fa fa-users"></i>
+                    Create Team
                 </button>
             </form>
         </div>
@@ -41,8 +55,7 @@
             </p>
             <div class="team-card__btn">
                 <button class="add-team-member">
-                    <i class="fa fa-plus"></i>
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user-plus"></i>
                 </button>
                 <button class="remove-team-member">
                     <!-- - -->
@@ -62,8 +75,7 @@
             </p>
             <div class="team-card__btn">
                 <button class="add-team-member">
-                    <i class="fa fa-plus"></i>
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user-plus"></i>
                 </button>
                 <button class="remove-team-member">
                     <!-- - -->
@@ -83,8 +95,7 @@
             </p>
             <div class="team-card__btn">
                 <button class="add-team-member">
-                    <i class="fa fa-plus"></i>
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user-plus"></i>
                 </button>
                 <button class="remove-team-member">
                     <!-- - -->

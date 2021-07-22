@@ -27,7 +27,7 @@ scheduleDisplay.addEventListener('click', e => {
     div_12am.classList.add('schedule-time')
     const time_start = document.createElement('div')
     time_start.classList.add('time-start')
-    time_start.innerText = '12am'
+    time_start.innerText = '12 am'
     div_12am.appendChild(time_start)
     scheduleDisplay.appendChild(div_12am)
 }
@@ -37,7 +37,7 @@ for (i = 1; i < 12; i++) {
     div_am.classList.add('schedule-time')
     const time_start = document.createElement('div')
     time_start.classList.add('time-start')
-    time_start.innerText = `${i}am`
+    time_start.innerText = `${i} am`
     div_am.appendChild(time_start)
     scheduleDisplay.appendChild(div_am)
 }
@@ -47,7 +47,7 @@ for (i = 1; i < 12; i++) {
     div_12pm.classList.add('schedule-time')
     const time_start = document.createElement('div')
     time_start.classList.add('time-start')
-    time_start.innerText = '12pm'
+    time_start.innerText = '12 pm'
     div_12pm.appendChild(time_start)
     scheduleDisplay.appendChild(div_12pm)
 }
@@ -57,7 +57,7 @@ for (i = 1; i < 12; i++) {
     div_pm.classList.add('schedule-time')
     const time_start = document.createElement('div')
     time_start.classList.add('time-start')
-    time_start.innerText = `${i}pm`
+    time_start.innerText = `${i} pm`
     div_pm.appendChild(time_start)
     scheduleDisplay.appendChild(div_pm)
 }
@@ -97,7 +97,7 @@ meetings.forEach(meeting => {
     const meeting_timerange = document.createElement('div')
     meeting_timerange.classList.add('meeting-range')
     meeting_timerange.style.height = `${duration * 5}em`
-    meeting_timerange.style.top = `calc(2em + 13px + ${startTime * 5}em)`
+    meeting_timerange.style.top = `calc(8em + 14px + ${startTime * 5}em)`
 
     meeting_timerange.addEventListener('click', e => {
         e.stopPropagation()
@@ -112,7 +112,7 @@ const milliTo12Hr = function () {
     const min = new Date().getMinutes()
     const hr = new Date().getHours()
     const acronym = (hr >= 12) ? 'pm' : 'am'
-    const currTime = `${hr < 10 ? '0'+hr : hr}:${min < 10 ? '0'+min : min}${acronym}`
+    const currTime = `${hr < 10 ? '0'+hr : hr}:${min < 10 ? '0'+min : min} ${acronym}`
     const currTimeDiv = scheduleDisplay.querySelector('.curr-time')
     currTimeDiv.innerText = currTime
     currTimeDiv.style.top = `calc(2em + ${(hr + min/60) * 5}em)`

@@ -20,8 +20,15 @@
     outline: none;
     border: none;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
     border-radius: 20px;
     background-color: transparent;
+}
+
+.search-bar__input::placeholder {
+    opacity: 0.5;
+    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .search-bar__submit {

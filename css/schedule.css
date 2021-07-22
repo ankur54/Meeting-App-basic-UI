@@ -10,6 +10,19 @@
     color: #6b6b6b;
 }
 
+.daily-schedule > h2 {
+    font-size: 2.25em;
+    letter-spacing: 0.2em;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.daily-schedule > h3 {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+}
+
 .schedule-display {
     display: flex;
     flex-direction: column;
@@ -27,19 +40,25 @@
     flex-shrink: 0;
 }
 
+.time-start {
+    position: relative;
+    color: #6b6b6b;
+    font-family: 'Quicksand', sans-serif;
+}
+
 .time-start::after {
     content: '';
     display: inline-block;
-    position: relative;
+    position: absolute;
     background: rgb(209, 209, 209, 0.3);
     height: 2px;
     width: 90%;
-    left: 1em;
+    top: 0.65em;
+    left: 3em;
 }
 
 .meeting-range {
     position: absolute;
-    top: calc(2em + 13px + 5em);
     left: 6em;
     height: 10em;
     width: 65%;
@@ -49,13 +68,15 @@
 }
 
 .curr-time {
-    position: absolute;
-    width: 90%;
-    height: fit-content;
+    position: relative;
+    display: inline;
+    width: 4em;
+    height: min-content;
     top: calc(2em + 4em);
-    left: 1em;
+    left: -0.5em;
     color: red;
     z-index: 2;
+    font-family: 'Quicksand', sans-serif;
     background-color: white;
 
 }
@@ -63,11 +84,12 @@
 .curr-time::after {
     content: '';
     display: inline-block;
-    position: relative;
+    position: absolute;
     background: red;
     height: 2px;
-    width: 90%;
-    left: 0.75em;
+    width: 50vw;
+    top: 8px;
+    left: 4.5em;
 }
 
 .chosen-select {

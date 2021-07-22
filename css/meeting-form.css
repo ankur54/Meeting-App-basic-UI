@@ -13,25 +13,29 @@ form.create-meeting {
     top: 3em;
     transition: transform 250ms ease-in-out;
     padding: 3em 2em;
+    font-family: 'Roboto', sans-serif;
 }
 
 form.create-meeting.show {
     transform: translateY(55vh);
 }
 
-form.create-meeting > input {
+form.create-meeting input, select {
     margin: 1em 0;
     border: none;
     border-bottom: 2px solid #707070;
     background-color: transparent;
 }
 
-form.create-meeting > label {
+form.create-meeting label {
     font-size: 1.1em;
     margin: 1em 0;
+    color:rgb(100, 100, 100);
 }
 
-form.create-meeting > input:focus {
+form.create-meeting > 
+    input:focus,
+    select:focus {
     outline: none;
 }
 
@@ -41,13 +45,45 @@ form.create-meeting > input:focus {
     font-size: 1.3em;
 }
 
+#create-meeting-title::placeholder,
+#create-meeting-description::placeholder {
+    opacity: 0.5;
+    font-family: 'Roboto', sans-serif;
+}
+
 #create-meeting-date {
-    flex-basis: 47%;
-    margin-left: 1em;
+    width: 40%;
+    margin: 1em;
+    border: none;
+    background-color: transparent;
+    color: rgb(236, 236, 236);
 }
 
 #create-meeting-start-time,
 #create-meeting-end-time {
     flex-basis: 20%;
-    margin: 0 1em;
+    margin: 0.75em 1em;
+    border: none;
+    background-color: transparent;
+    color: rgb(236, 236, 236);
+}
+
+#select-attendee {
+    flex-basis: 70%;
+}
+
+button.create-meeting {
+    padding: 0.75em 1em;
+    margin-left: 1em;
+    margin-top: 1em;
+    background-color: transparent;
+    border: 2px solid rgb(105, 166, 168);
+    border-radius: 4px;
+    color: rgb(52, 124, 115);
+}
+
+button.create-meeting:hover {
+    cursor: pointer;
+    background-color: rgb(105, 166, 168);
+    color: rgb(211, 211, 211);
 }

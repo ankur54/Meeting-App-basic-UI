@@ -4,13 +4,8 @@
     padding: 0;
 }
 
-body {
-    /* overflow-y: hidden; */
-}
-
 main {
     display: flex;
-    
 }
 
 header {
@@ -18,7 +13,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 2em;
-    background-color: #dfdfdf
+    background-color: #dfdfdf;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 header > 
@@ -58,6 +54,7 @@ a {
 
 a.active {
     background-color: #b6b6b6;
+    color: #fff;
 }
 
 nav {
@@ -70,4 +67,5 @@ nav > a {
     padding: 0.2em 0.5em;
     border-radius: 0.2em;
     border: 1.75px solid #b6b6b6;
+    font-family: 'Montserrat', sans-serif;
 }
