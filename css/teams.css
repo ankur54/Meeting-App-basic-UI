@@ -1,9 +1,13 @@
+body {
+    background-color: rgba(238, 238, 238, 0.74);
+}
+
 .teams-list {
     display: flex;
     flex-wrap: wrap;
     gap: 5vw;
 
-    padding: 3em 2em;
+    padding: 3em 4em;
 }
 
 .team-card {
@@ -14,9 +18,14 @@
     gap: 2em;
 
     padding: 3em 2em;
-    /* border: 1px solid #777; */
+    color: rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.2);
     border-radius: 0.5em;
+}
+
+.team-card__title {
+    color: cornflowerblue;
 }
 
 .team-card__description {
@@ -32,6 +41,7 @@
 
 .team-card__btn {
     display: flex;
+    align-items: center;
     gap: 0.5em;
 }
 
@@ -40,7 +50,14 @@
     flex-basis: 40%;
     padding: 0.5rem 1rem;
 
-    background-color: rgb(126, 218, 126);
+    border: 2px solid rgb(76, 146, 125);
+    color: rgb(129, 184, 167);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.add-team-member:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(76, 146, 125);
 }
 
 .add-team-member > .fa.fa-user {
@@ -48,8 +65,17 @@
 }
 
 .remove-team-member {
-    padding: 1rem;
+    width: 50%;
+    padding: 0.3rem 0.5rem;
+    font-weight: 700;
+    border: 2px solid rgb(231, 132, 132);
     background-color: rgb(231, 132, 132);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.remove-team-member:hover {
+    color: rgb(231, 132, 132);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .team-members {
@@ -66,7 +92,9 @@
     display: none;
     text-align: center;
     border-radius: 0.5em;
-    border: 1px solid #777;
+    color: rgb(59, 81, 122);
+    background-color: rgba(100, 148, 237, 0.342);
+    border: 1px solid cornflowerblue;
 }
 
 .team-member.show {
@@ -103,15 +131,16 @@
 
 .modal-container.show {
     display: flex;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.1);
 }
 
 .modal {
     width: 60%;
     margin: 0 auto;
     padding: 10em 5em;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 1em;
+    backdrop-filter: blur(10px);
 }
 
 form.create-team {
@@ -122,13 +151,20 @@ form.create-team {
 
 #create-team-title {
     flex-basis: 100%;
+    padding: 0.5em 1em;
     font-size: 1.5em;
     border: none;
-    border-bottom: 2px solid #aaa;
+    border-bottom: 2px solid #bbb;
+}
+
+#create-team-title::placeholder,
+#create-team-description::placeholder {
+    opacity: 0.4;
 }
 
 #create-team-description {
     flex-basis: 100%;
+    padding: 0.5em 1em;
     border: none;
-    border-bottom: 2px solid #aaa;
+    border-bottom: 2px solid #bbb;
 }
