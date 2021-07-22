@@ -7,7 +7,9 @@ const dayHeader = dailySchedule.querySelector('h3.today-day')
 const day = currDate.getDay()
 const date = currDate.getDate()
 const month = currDate.getMonth()
-const year = currDate.getYear()
+const year = currDate.getYear() + 1900
+
+console.log(year)
 
 dateHeader.innerText = `${date} ${months[month]}, ${year}`
 dayHeader.innerText = days[day]
