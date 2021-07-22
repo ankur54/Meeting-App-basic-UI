@@ -4,12 +4,13 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
+body {
+    /* overflow-y: hidden; */
 }
 
-body {
-    /* overflow: hidden; */
+main {
+    display: flex;
+    
 }
 
 header {

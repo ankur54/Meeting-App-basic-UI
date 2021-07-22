@@ -1,20 +1,23 @@
 .daily-schedule {
     flex-grow: 1;
+    height: calc(100vh - 3em);
+    padding: 2em 1em;
 }
 
 .daily-schedule > h2, h3 {
     padding: 0 3rem;
-    margin: 0.75em 0;
+    margin-bottom: 0.75em;
     color: #6b6b6b;
 }
 
 .schedule-display {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 75vh;
  
     position: relative;
-    padding: 2em 2em 0;
+    padding: 2em;
+    /* padding-bottom: 7em; */
     overflow-y: auto;
     overflow-x: hidden;
 }

@@ -10,13 +10,13 @@ form.create-meeting {
     justify-content: center;
     
     position: absolute;
-    transform: translateY(-20em);
+    top: 3em;
     transition: transform 250ms ease-in-out;
     padding: 3em 2em;
 }
 
 form.create-meeting.show {
-    transform: translateY(0);
+    transform: translateY(55vh);
 }
 
 form.create-meeting > input {

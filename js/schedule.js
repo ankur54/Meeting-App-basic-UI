@@ -4,6 +4,7 @@ const dailySchedule = document.querySelector('section.daily-schedule')
 const dateHeader = dailySchedule.querySelector('h2.today-date')
 const dayHeader = dailySchedule.querySelector('h3.today-day')
 
+// const currDate = new Date()
 const day = currDate.getDay()
 const date = currDate.getDate()
 const month = currDate.getMonth()
